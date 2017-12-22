@@ -3,8 +3,12 @@
 // load all the things we need
 var FacebookStrategy = require('passport-facebook').Strategy;
 
-// load up the user model
-// var User       = require('../app/models/user');
+// set up database access
+var pgp = require('pg-promise')({
+  // initialization options
+});
+DATABASE_URL = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/node-authentication'
+var db = pgp(DATABASE_URL);
 
 // load the auth variables
 var configAuth = require('./auth');

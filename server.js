@@ -11,13 +11,6 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
-var pgp = require('pg-promise')({
-  // initialization options
-});
-
-// set up database access
-DATABASE_URL = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/node-authentication'
-var db = pgp(DATABASE_URL);
 
 // require('./config/passport')(passport); // pass passport for configuration
 
